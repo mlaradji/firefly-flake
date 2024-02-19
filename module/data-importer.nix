@@ -1,9 +1,4 @@
-{
-config,
-pkgs,
-lib,
-...
-}:
+nixpkgs: { pkgs, config, lib, ... }:
 
 let
 cfg = config.services.firefly-iii;

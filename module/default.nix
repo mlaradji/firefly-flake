@@ -1,6 +1,8 @@
+nixpkgs: { pkgs, config, lib, ... }:
+
 {
 imports = [
-./firefly-iii.nix
-./data-importer.nix
+(import ./firefly-iii.nix nixpkgs)
+(import ./data-importer.nix nixpkgs)
 ];
 }
