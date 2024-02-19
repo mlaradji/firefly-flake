@@ -17,19 +17,36 @@
         "type": "github"
       }
     },
-    "firefly-iii-src": {
+    "data-importer-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1705764616,
-        "narHash": "sha256-jDiFT+qx3wfMvGplGvdTbUZM+/dHuZa7Vp4EEPhNBL4=",
+        "lastModified": 1708152259,
+        "narHash": "sha256-hR17EL/4XdT5aewdKx+5ytSjWUGFKxh3Ht0qghWolTQ=",
         "owner": "firefly-iii",
-        "repo": "firefly-iii",
-        "rev": "e00addc0b0aed4872ae7d132d10f3062604947ba",
+        "repo": "data-importer",
+        "rev": "fe91665137a69ce78cf2a90f963fa63701c5a8d8",
         "type": "github"
       },
       "original": {
         "owner": "firefly-iii",
-        "ref": "v6.1.7",
+        "ref": "v1.4.4",
+        "repo": "data-importer",
+        "type": "github"
+      }
+    },
+    "firefly-iii-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1707159192,
+        "narHash": "sha256-2KgQcatheAbFbs72PHjPpnBMWMzXxTtGatZQ9zIAuGw=",
+        "owner": "firefly-iii",
+        "repo": "firefly-iii",
+        "rev": "fa3343f4370f6c3df7dbef99c60bf87cdb3b7ead",
+        "type": "github"
+      },
+      "original": {
+        "owner": "firefly-iii",
+        "ref": "v6.1.9",
         "repo": "firefly-iii",
         "type": "github"
       }
@@ -53,6 +70,7 @@
     "root": {
       "inputs": {
         "composer2nix-src": "composer2nix-src",
+        "data-importer-src": "data-importer-src",
         "firefly-iii-src": "firefly-iii-src",
         "nixpkgs": "nixpkgs"
       }
