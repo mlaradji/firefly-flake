@@ -3,7 +3,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
     firefly-iii-src = {
-      url = "github:mlaradji/firefly-iii/6ab6676645fede4de8e56dd9fbc24e652d688c34";
+      url = "github:mlaradji/firefly-iii/37cf37e1512760dbc4ea6ade4e9d0bf405d11bb1";
       flake = false;
     };
     data-importer-src = {

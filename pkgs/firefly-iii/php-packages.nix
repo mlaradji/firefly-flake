@@ -1692,7 +1692,6 @@ composerEnv.buildPackage {
   src = composerEnv.filterSrc ./.;
   executable = false;
   symlinkDependencies = false;
-  composerExtraArgs = "--no-scripts";
   meta = {
     homepage = "https://github.com/firefly-iii/firefly-iii";
     license = "AGPL-3.0-or-later";

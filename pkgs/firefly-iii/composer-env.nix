@@ -160,6 +160,8 @@ let
           cd $out
         ''}
 
+        echo "APP_KEY=SomeRandomStringOf32CharsExactly" > .env
+
         # Remove unwanted files
         rm -f *.nix
 
