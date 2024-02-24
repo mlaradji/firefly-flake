@@ -13,12 +13,13 @@ then
 fi
 
 # Determine the latest version.
-GITHUB_OWNER=firefly-iii
+GITHUB_OWNER=mlaradji
 GITHUB_REPO=firefly-iii
-latest_version=$(curl -s --show-error "https://api.github.com/repos/$GITHUB_OWNER/$GITHUB_REPO/releases/latest" | jq -r '.tag_name')
+GITHUB_BRANCH=main
+latest_version=$(curl -s --show-error "https://api.github.com/repos/$GITHUB_OWNER/$GITHUB_REPO/commits/$GITHUB_BRANCH" | jq -r '.sha')
 
 # Determine if we are already at the latest version.
-current_version=$(nix eval -f ../flake.nix --raw inputs.firefly-iii-src.url | rg -o 'v?\d+\.\d+\.\d+')
+current_version=$(nix eval -f ../../flake.nix --raw inputs.firefly-iii-src.url | rg -o '[a-z\d]{40}')
 
 if [[ "$current_version" == "$latest_version" ]]; then
     echo "firefly-iii: already at $current_version"
@@ -37,7 +38,7 @@ composer2nix --name "firefly-iii" \
 rm composer.json composer.lock
 
 # Update the version number in flake.nix
-sed -i "s:firefly-iii/firefly-iii/v\?\([0-9]\+\.\?\)\{3\}:firefly-iii/firefly-iii/${latest_version}:" ../flake.nix
+sed -i "s:${GITHUB_OWNER}/${GITHUB_REPO}/${current_version}:${GITHUB_OWNER}/${GITHUB_REPO}/${latest_version}:" ../../flake.nix
 
 nix fmt
 # Check if the update worked by attempting a build.

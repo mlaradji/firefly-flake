@@ -37,17 +37,17 @@
     "firefly-iii-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1708660571,
-        "narHash": "sha256-2oefVHYRW6f1nd4ERS2uo0QQkhGCu/0LH1W4XAVjGmg=",
+        "lastModified": 1708793595,
+        "narHash": "sha256-2RZdDIsTgmzh3NmoJMp88My2jhVTsygdEGRlsEiwYXQ=",
         "owner": "mlaradji",
         "repo": "firefly-iii",
-        "rev": "bf07ce3030b008459af5e30c16ca93496a7fed1e",
+        "rev": "6ab6676645fede4de8e56dd9fbc24e652d688c34",
         "type": "github"
       },
       "original": {
         "owner": "mlaradji",
         "repo": "firefly-iii",
-        "rev": "bf07ce3030b008459af5e30c16ca93496a7fed1e",
+        "rev": "6ab6676645fede4de8e56dd9fbc24e652d688c34",
         "type": "github"
       }
     },
